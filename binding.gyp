@@ -34,6 +34,12 @@
             'include_dirs': [
               '/usr/local/include',
             ],
+            'ccflags': [
+              '-mmacosx-version-min=10.7',
+              '<!@(pkg-config --cflags pHash)',
+              '-std=c++11',
+              '-stdlib=libc++'
+            ],
           },
         ],  
       ],
